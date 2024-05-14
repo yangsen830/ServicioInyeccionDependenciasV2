@@ -1,11 +1,13 @@
 ﻿
+using ServicioInyeccionDependenciasV2.Aplicacion.Dependencias;
+
 namespace ServicioInyeccionDependenciasV2.Infraestructura.Senders
 {
-    public class EmailService
+    public class EmailService : ISender
     {
-        public void SendMessage(string email, string message)
+        public void SendMessage(string medio, string message)
         {
-            Console.WriteLine("Email sent to: " + email + " with message: " + message);
+            Console.WriteLine("Email sent to: " + medio + " with message: " + message);
         }
     }
 }
