@@ -4,15 +4,15 @@ La inyección de dependencias es un patrón de diseño que se utiliza para reduc
 
 ## TODO 1: Refactor
 
-| Se puede usar diferentes...                                         | Crea la interfaz...                            | Inyéctala en el constructor de...                           |
+| [1] Se puede usar diferentes...                                         | [2] Crea la interfaz...                            | [3] Inyéctala en el constructor de...                           |
 |----------------------------------------------|---------------------------------|--------------------------------|
 |  Servicios de mensajerías (Email, SMS) |  ISender |  CommunicationService |
 | Repositorios (DataBase, Archivos, Curls)    | IRepository  | CustomerService |
 | Conexiones (MySQL, Oracle)                  | IDbConnection | CustomerRepository |
 
 ### Pasos:
-1. Crea la interfaz. Y haz que las clases implementen de ellas.
-2. Inyecta la interfaz en el constructor de la clase que la necesite. Y pasa la instancia de la interfaz como argumento al constructor.
+1. [2] Crea la interfaz. Y haz que las clases implementen de ellas [1].
+2. Inyecta la interfaz en el constructor de la clase que la necesite [3]. Y pasa la instancia de la interfaz como argumento al constructor (en program.cs).
 
 
 Infraestructura seleccionada:
@@ -22,7 +22,7 @@ Infraestructura seleccionada:
 Realiza Pull Request a la rama `master` y mergea los cambios por `fastforward`.
 
 ## TODO 3: Diagrama UML
-Actualiza el archivo con el diagrama UML. Muestra 2 diagramas: el antes y después.
+Muestra 2 diagramas UML: el antes y después. Se debe mostrar las asociaciones e Interfaces.
 
 ## TODO 4: Unit Test
-Crea otra rama haz un test a CustomerService con una dependencia de Test
+Crea otra rama haz un test a CustomerService, inyecta una dependencia de Test.
